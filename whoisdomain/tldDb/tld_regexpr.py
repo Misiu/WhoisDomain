@@ -807,7 +807,7 @@ ZZ["pl"] = {
     "expiration_date": R(r"(?:\noption expiration date:|renewal date:(?!(?:.|\n)*\noption expiration date:))\s*(.+)\n"),
     "name_servers": R(r"nameservers:%s" % xStr(r"(?:\s+(\S+)[^\n]*\n)?", 4)),
     "status": R(r"\nStatus:\n\s*(.+)"),
-    "_test": "google.pl",
+    "_test": "wp.pl",
 }
 
 ZZ["pt"] = {
