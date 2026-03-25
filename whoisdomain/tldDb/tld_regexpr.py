@@ -277,13 +277,10 @@ ZZ["bank"] = {
 }
 
 ZZ["be"] = {
-    "extend": "com",
-    "_server": "whois.dns.be",
+    "extend": "pl",
     "domain_name": R(r"\nDomain:\s*(.+)"),
     "registrar": R(r"Company Name:\n?(.+)"),
     "creation_date": R(r"Registered:\s*(.+)\n"),
-    "expiration_date": None,
-    "updated_date": None,
     "status": R(r"Status:\s?(.+)"),
     "name_servers": R(r"Nameservers:(?:\n[ \t]+(\S+))?(?:\n[ \t]+(\S+))?(?:\n[ \t]+(\S+))?(?:\n[ \t]+(\S+))?\n\n"),
 }
@@ -807,7 +804,7 @@ ZZ["pl"] = {
     "expiration_date": R(r"(?:\noption expiration date:|renewal date:(?!(?:.|\n)*\noption expiration date:))\s*(.+)\n"),
     "name_servers": R(r"nameservers:%s" % xStr(r"(?:\s+(\S+)[^\n]*\n)?", 4)),
     "status": R(r"\nStatus:\n\s*(.+)"),
-    "_test": "wp.pl",
+    "_test": "google.pl",
 }
 
 ZZ["pt"] = {
