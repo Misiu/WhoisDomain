@@ -277,12 +277,16 @@ ZZ["bank"] = {
 }
 
 ZZ["be"] = {
-    "extend": "pl",
+    "extend": "com",
+    "_server": "whois.dns.be",
     "domain_name": R(r"\nDomain:\s*(.+)"),
-    "registrar": R(r"Company Name:\n?(.+)"),
+    "registrar": R(r"Registrar:\s*\n\s+Name:\s*(.+)"),
     "creation_date": R(r"Registered:\s*(.+)\n"),
-    "status": R(r"Status:\s?(.+)"),
-    "name_servers": R(r"Nameservers:(?:\n[ \t]+(\S+))?(?:\n[ \t]+(\S+))?(?:\n[ \t]+(\S+))?(?:\n[ \t]+(\S+))?\n\n"),
+    "expiration_date": None,
+    "updated_date": None,
+    "status": R(r"Status:\s*(.+)"),
+    "name_servers": R(r"Nameservers:(?:\n[ \t]+(\S+))?(?:\n[ \t]+(\S+))?(?:\n[ \t]+(\S+))?(?:\n[ \t]+(\S+))?\n"),
+    "_test": "google.be",
 }
 
 ZZ["biz"] = {
