@@ -2,6 +2,7 @@
 
   * A Python package for retrieving WHOIS information of DOMAIN'S ONLY.
   * Python 2.x IS NOT supported.
+  * Python >=3.10
   * Currently no additional python packages need to be installed.
 
 ---
@@ -69,7 +70,7 @@ and `make suggest`.
 ---
 
 ## Support
- * Python 3.x is supported for x >= 9
+ * Python 3.x is supported for x >= 10
  * Python 2.x IS NOT supported.
 
 ## Author's
@@ -131,4 +132,12 @@ add switch not to ignore leading www in the domain request
 - fix co.il and add il tld
 - cleanup some obsolete tld's
 
+## 1.20260326.1
+- fix 'be' and 'pl' ; thanks Misiu Tomasz.
+- add additional domains from iana.
+- remove domains no longer in iana.
+- Makefile: switch to ruff instead of black and pylama.
+
 ## in progress
+- switch to minimal version 3.10
+- update gitgub-action lint (mypy) to use `setup-python@v6` and `checkout@v6`
