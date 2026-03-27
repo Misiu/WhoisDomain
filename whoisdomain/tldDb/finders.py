@@ -20,8 +20,6 @@ PATTERN_CACHE: Dict[Tuple[str, int], Any] = {}
 
 
 def make_pat(reStr: str, flags: int) -> Any:
-    return re.compile(reStr, flags=flags)
-
     if (reStr, flags) in PATTERN_CACHE:
         pattern = PATTERN_CACHE[reStr, flags]
     else:

@@ -294,7 +294,7 @@ class ProcessWhoisDomainRequest:
         tldLevel = str(self.dc.publicSuffixStr).split(".") if self.dc.hasPublicSuffix else str(self.dc.tldString).split(".")
 
         while len(self.dc.dList) > len(tldLevel):
-            log.debug(f"{self.dc.dList}")
+            log.debug("%s", self.dc.dList)
             z, finished = self._doOneLookup()
 
             if finished:
